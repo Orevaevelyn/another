@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Home-Page</title>
+ body{
+ --top-row-height: 70px;
+ margin: 0;
+ margin-top: var(--top-row-height) ;
+ 
+}
+.top-row{
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: var(--top-row-height);
+ /*display: flex;*/
+ background: #ffffff;
+ margin-bottom: 5em;
+ 
+ 
+}
+.logo{
+ width: 15em;
+ height: 300%;
+ display: inline-block;
+ /* padding: 7px 0px px 9px; 
+ box-sizing: border-box;*/
+ 
+ 
+ 
+}
+.top-row>div{
+  width: 5%;
+  display: inline-block;
+  float: left;
+  
+  
+}
+
+.nav-btn{
+ float: right;
+ display: inline-block;
+ width: 5em;
+ height: 100%;
+ align-items: center;
+ justify-content: center;
+ background: none;
+ outline: none;
+ cursor: pointer;
+ border: none;
+ margin-top: 7em;
+ 
+ 
+ 
+}
+.nav-btn:hover{
+ /* make it shake */
+ transform: rotateX(360deg);
+ transition: transform 0.5s;
+}
+
+svg{
+ fill: #000000;
+}
+
+.close-btn{
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.close-btn>svg{
+  fill: #000000;
+  stroke: #118d22;
+}
+
+.nav{
+ --nav-width:300px;
+
+ position: fixed;
+ top: 0;
+ right: 0;
+ width: var(--nav-width);
+ height: 62vh;
+ background-color: #000000f8;
+ transform: translateX(var(--nav-width));
+ transition: transform 0.001s;
+ z-index: 1;
+}
+.nav-open{
+ transform: translateX(0);
+}
+.navs{
+ display:block;
+ font-family: sans-serif;
+ font-size: 1em;
+ padding: 1.2em;
+ text-decoration: none;
+ color:#118d22 ;
+}
+
+
+
+.navs:not(:last-child){
+ border-bottom: 1px solid #222222;
+}
+
+.navs:hover{
+ background: #ffffff11;
+}
+
+.nav-overlay{
+  display: none; 
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100vw;
+ height: 100vh;
+ background: #0000002d;
+
+}
+
+.nav-overlay-open{
+ display: block;
+}
+
+
+
+h1{
+ 
+ font-family: Arial, Helvetica, sans-serif;
+ font-weight: 400;
+ display: inline-block;
+ float: left;
+ text-align: left;
+ width: 40%;
+ margin-bottom: 1em;
+ word-spacing: 2px;
+ 
+ 
+
+}
+p{
+ font-family:  Helvetica, sans-serif;
+margin-bottom: 3em;
+clear: both;
+float: left;
+display: inline-block;
+width: 58%;
+color: #000000;
+font-weight: 540;
+font-size: 1.2em;
+}
+
+.booking{
+text-decoration: none;
+font-family: Arial, Helvetica, sans-serif;
+border: transparent solid 6px ;
+border-width: 6px 14px;
+border-radius: 6px;
+color: #ffffff;
+background-color: #118d22;
+display: inline-block;
+clear: both;
+float: left;
+
+
+}
+
+.heading{
+ margin: 9em 1.5em;
+  position: absolute; 
+ top: 1em;
+ 
+
+}
+ .background{
+ opacity: 0.8;
+ display: inline-block;
+ float: right;
+ margin-top: 3em;
+ 
+}
+
+@media only screen and (min-width:825px){
+
+ .nav-btn{
+  display: none;
+ }
+ .top-row{
+  background-color: #ffffff;
+ }
+ .nav{
+  transform: translateX(0);
+  display: inline-block;
+  width: 70%;
+
+  height: 10%;
+  top: 4.6em;
+  margin-top: 2em;
+  background-color: transparent;
+  
+
+ }
+ .navs{
+  display: inline-block;
+  font-size: 1.05em;
+ margin: 0 auto;
+ 
+
+ }
+ .navs:not(:last-child){
+  border-bottom: 0px solid #222222;
+ }
+ 
+ .nav a:focus{
+  border-bottom: 1px solid #1ea35a;}
+
+  .nav a:hover{
+   border: solid 1px transparent;
+   border-radius: 3px;
+   background-color: #000000;
+  }
+  .close-btn{
+    display: none;
+  }
+  
+
+}
+@media only screen and (max-width:740px){
+ h1{
+  text-align: center;
+  clear: both;
+  width: 100%;
+ }
+ p{
+  text-align: center;
+  clear: both;
+  width: 100%;
+ }
+ .booking{
+  clear: both;
+ 
+ }
+
+}
+ <link rel="shortcut icon" href="/images/Brand Icon.png" type="image/x-icon">
+ 
+</head>
+<body>
+ 
+ 
+  <div class="top-row">
+    <div><img src="/images/LOGO PNG.png"   alt="BrandCape-logo" class="logo"> </div>
+   <button type="button" class="nav-btn"><svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"  ><path d="M6 36v-3h36v3Zm0-10.5v-3h36v3ZM6 15v-3h36v3Z"/></svg></button>
+  </div>
+  
+
+ 
+
+ <div><img src="/images/pngwing.com (2).png" alt="" class="background"></div>
+ <div class="nav-overlay "></div> 
+ 
+  <nav class="nav ">
+    <button type="button" class="close-btn"> <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="m12.45 37.65-2.1-2.1L21.9 24 10.35 12.45l2.1-2.1L24 21.9l11.55-11.55 2.1 2.1L26.1 24l11.55 11.55-2.1 2.1L24 26.1Z"/></svg></button>
+   <a href="#BrandCape.html" class="navs" >Home</a>
+   <a href="#" class="navs">About</a>
+   <a href="#" class="navs" id="order" onclick="pop()">Order Now</a>
+   <a href="#" class="navs">Food</a>
+   <a href="/signup.html" target="_blank" class="navs">Sign-Up</a>
+   <a href="#" class="navs">Login</a> 
+  </nav>
+ 
+ 
+  <div class="heading">
+   <h1>We deliver delicious & healthy food</h1>
+   <p>Order online or book a table. We are always ready to fufill your demand. We provide your order within a short amount of time. Keep with us to take our delicious food.</p>   
+   <a href="#" class="booking">BOOK A TABLE</a>
+
+  </div>
+   
+
+  
+ 
+ 
+  <script>
+  {
+  const navMenu = document.querySelector(".nav");
+  const navOverlay = document.querySelector(".nav-overlay");
+  const navButton = document.querySelector(".nav-btn");
+  const closeBtn = document.querySelector(".close-btn")
+
+  navButton.addEventListener("click", () => {
+    navMenu.classList.add("nav-open");
+    navOverlay.classList.add("nav-overlay-open");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    navMenu.classList.remove("nav-open");
+    navOverlay.classList.remove("nav-overlay-open");
+  });}
+
+function pop() {
+  
+  alert("Sign up first.");
+}
+   
+ </script> 
+</body>
+
+</html>
